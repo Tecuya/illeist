@@ -7,4 +7,4 @@ Django==1.4.3
 South==0.7.6
 django-extensions==1.0.1
 nose==1.2.1
-
+mock==1.0.1
