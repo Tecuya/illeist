@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 
 def browser(request):
-    return render(request, 'index.html')
+    return render(request, 'home.html')

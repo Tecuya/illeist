@@ -1,0 +1,328 @@
+/* Based in part on http://andreasviklund.com/templates/daleri-mega/ */
+
+/* Body */
+
+body {
+  background:#303030;
+  color:#eee;
+  font:76% Verdana,Arial,Tahoma,"Trebuchet MS",sans-serif;
+  line-height:1.4em;
+  text-align:center;
+  padding:0;
+}
+
+
+#wrap {
+  width:90%;
+  min-width:750px;
+  background-color:#fff;
+  color:#555;
+  padding:1%;
+  margin:0 auto 0 auto;
+  text-align:left;
+  border:1px solid #555;
+}
+
+#top {
+  width:90%;
+  margin:15px auto 15px auto;
+}
+
+#skiplinks {
+  width:40%;
+  float:right;
+  color:#ddd;
+  font-size:1.1em;
+  text-align:right;
+  margin:0;
+  padding:0;
+
+  a {color:#bacac8; border-bottom: 1px dotted #aaa;}
+  a:hover {color:#fff; text-decoration:none; border-bottom:1px dotted #fff;}
+}
+
+/* Header and title */
+#sitetitle { 
+  float:left;
+  text-align:left;
+
+  h1 {
+    font-weight:700;
+    font-size:2.4em;
+    color:#ddd;
+    letter-spacing:-1px;
+    line-height:1.3em;
+    margin:0;
+    padding:0;
+
+    a {
+      font-weight:700;
+      letter-spacing:-1px;
+      color:#bacac8;
+    }
+
+    a:hover {color:#fff;}
+  }
+
+  p {
+    margin:5px 0 0 0;
+    padding:0;
+    letter-spacing:-1px;
+    font-size:1.3em;
+    color:#ccc;
+  }
+}
+
+/* Main menu */
+#mainmenu { 
+  margin:0 0 10px 0;
+  
+  dl { 
+    float:left;
+    display:block;
+    width:16%;
+    margin: 0 0.5% 5px 0.5%;
+    
+    .introduction { 
+      float:left;
+      display:block;
+      width:31%;
+      margin: 0 0 5px 0.5%;
+    }
+    
+    dt { 
+      border-bottom:1px solid #ccc;
+      padding:0;
+      font-weight:700;
+      margin:0;
+      color:#777;
+
+      a {
+        font-weight:700;
+        color:#555;
+        font-size:1.1em;
+      }
+
+      a:hover {
+        color:#444;
+      }
+    }
+
+    dd { 
+      padding:0;
+      margin:0;
+      border-bottom:1px solid #eee;
+      
+      a {
+        font-weight:400;
+        padding:1px 0 1px 5px;
+        color:#4d699d;
+        display:block;
+      }
+
+      a:hover {
+        color:#444;
+        background:#eaeaea;
+      }
+    }
+  }
+}
+
+/* Headline */
+#headline {
+  text-align:center;
+  margin:5px 0 15px 0;
+  border:1px solid #e0e0e0;
+  background-color:#f0f0f0;
+  color:#777;
+  font-size:0.9em;
+
+  p {
+    margin:2px;
+    padding:0;
+  }
+}
+
+/* Headers */
+h2, h3, h4 {
+  margin:0 0 12px;
+  padding-bottom:5px;
+  color:#555;
+  font-weight:700;
+}
+
+/* Content */
+#content {
+  text-align:left;
+  width:70%;
+  float:left;
+  h2 {
+    font-size:1.7em;
+    letter-spacing:-1px;
+    clear:left;
+    border-bottom:2px solid #ccc;
+  }
+  h3 {
+    font-size:1.4em;
+    letter-spacing:-1px;
+    margin-bottom:7px;
+  }
+  
+  h2 a, h3 a { 
+    font-weight:700;
+    border:0;
+  }
+
+  p {
+    margin:0 0 15px;
+  }
+  a {
+    border-bottom:1px dotted #888;
+  }
+  a:hover {
+    color: #222;
+    border-bottom:1px dotted #000;
+  }
+  ul, ol {
+    margin:0 0 15px 10px;
+    padding:0 0 0 5px;
+  }
+  ul li, ol li {
+    margin:0 0 4px 5px;
+  }
+  ul ul, ol ol {
+    margin:5px 0 5px 10px;
+  }
+}
+
+/* Sidebar */
+#sidebar {
+  text-align:left;
+  float:right;
+  margin:0;
+  width:29%;
+
+  h2, h3 { 
+    font-size:1.4em;
+    padding:0 0 2px 0;
+    margin:0 0 5px 0;
+    border-bottom:2px solid #ccc;
+  }
+  
+  p, ul, ol { 
+    margin:0 0 15px 0;
+    padding:0;
+  }
+  
+  ul { 
+    li { 
+      list-style:none; margin:0 0 3px 0;
+      a { 
+        font-weight:400; font-size:1.1em;
+      }
+    }
+
+    ul { 
+      margin:3px 0 3px 10px;
+      font-size:1em;
+
+      li { 
+        margin:2px 0;        
+        a { 
+          font-weight:400;        
+        } 
+      }
+    }
+  }
+
+  ul.sidemenu { 
+    li { 
+      list-style: none;
+      padding:0;
+      margin:0 0 2px 0;
+      
+      a { 
+        display: block;
+        overflow: visible;
+        padding:2px 0 2px 5px;
+        background-color:#f4f4f4;
+        font-weight:400;
+        border:1px solid #e0e0e0;
+        font-size:1.1em; 
+      }
+      
+      a:hover { 
+        border:1px solid #ddd;
+        color:#444;
+        background-color:#fff
+      }
+      
+      .current li a { 
+        background-color:#f8f8f8;
+        color:#467aa7;
+        border:1px solid #eee;
+        border-bottom:1px solid #ddd;
+      }
+    }      
+    
+    ul { 
+      margin:0; padding:2px 0 0 15px;
+      li { 
+        letter-spacing:0;
+        a { 
+          font-size:0.9em;
+          padding:1px 0 1px 5px;
+        }
+      }
+    }
+  }
+  
+  ul li.current a { 
+    background-color:#f8f8f8;
+    color:#467aa7;
+    border:1px solid #eee;
+    border-bottom:1px solid #ddd;
+  }
+}
+
+/* Footer */
+#footer {
+  clear:both;
+  width:90%;
+  line-height:1.6em;
+  color:#ccc;
+  margin: 0 auto;
+  padding:10px 0;
+
+  p {
+    margin:0;
+    padding:0;
+  }
+  a {
+    color:#bacac8;
+    border-bottom: 1px dotted #aaa;
+  }
+  a:hover {
+    color:#fff;
+    text-decoration:none;
+    border-bottom:1px dotted #fff;
+  }
+}
+
+/* Links and tags */
+a {color:#4d699d; font-weight:400; text-decoration:none;}
+a:hover {color:#444; text-decoration:none;}
+img, a img {border:0;}
+
+/* Various classes */
+.left {float:left; width:48%; text-align:left;}
+.right {float:right; width:48%; text-align:left;}
+.trio1 {float:left; width:31%; padding:0 2% 0 0;}
+.trio2 {float:left; width:31%; padding:0 2% 0 0;}
+.trio3 {float:left; width:33%; padding:0;}
+.textleft {text-align:left;}
+.textright {text-align:right;}
+.textcenter {text-align:center;}
+.introtext, .introtext a {font-weight:700;}
+.clear {visibility:hidden; clear:both; height:2px;}
+.hide {display:none;}
