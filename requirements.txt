@@ -1,7 +1,7 @@
 # NPM dependencies:
 # - mocha
 # - coffee
-# - chai
+# - mocha-phantomjs (client spec runner; requires phantomjs > 1.7 -- 1.6 will NOT work)
 
 Django==1.4.3
 South==0.7.6
