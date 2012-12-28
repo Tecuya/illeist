@@ -128,6 +128,7 @@ INSTALLED_APPS = (
     # 3rd party
     'django_extensions',
     'south',
+    'django_nose',
 
     # ours
     'tmesis',
@@ -162,3 +163,7 @@ LOGGING = {
         },
     }
 }
+
+#########
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
