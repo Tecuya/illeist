@@ -6,7 +6,7 @@ from django.test.client import Client
 from django.utils import simplejson
 import django.test
 
-from shared import create_test_data
+from shared import create_data
 import tmesis.views
 
 
@@ -32,7 +32,7 @@ class TestViewsNearby(django.test.TestCase):
     "tmesis.views::nearby - integration"
 
     def setUp(self):
-        create_test_data()
+        create_data()
 
     def test_nearby_works(self):
 

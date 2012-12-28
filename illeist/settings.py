@@ -12,13 +12,17 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         # Or path to database file if using sqlite3.
-        'NAME': 'illeist.sqlite3',
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        # Set to empty string for localhost. Not used with sqlite3.
-        'HOST': '',
+        'NAME': 'illeist',
+        'USER': 'illeist',                      # Not used with sqlite3.
+        'PASSWORD': 'shuiwfge92',                  # Not used with sqlite3.
+
+        # actually has to say "localhost", despite the default django
+        # settings.py's claims that it will use localhost if an empty
+        # string is provided..
+        'HOST': 'localhost',
+
         # Set to empty string for default. Not used with sqlite3.
         'PORT': '',
     }

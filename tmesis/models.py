@@ -4,6 +4,9 @@ from django.db import models
 class Content(models.Model):
     title = models.CharField(max_length=255)
 
+    def __unicode__(self):
+        return self.title
+
     def jsonify(self):
         return {
             'id': self.pk,
@@ -35,3 +38,6 @@ class Content(models.Model):
 class ContentRelation(models.Model):
     parent = models.ForeignKey('Content', related_name='parent_relation')
     child = models.ForeignKey('Content', related_name='child_relation')
+
+    def __unicode__(self):
+        return '%s > %s' % (self.parent, self.child)
