@@ -11,5 +11,7 @@ urlpatterns = patterns(
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', include('viron.urls')),
+    url(r'^spec', 'viron.views.showtpl', {'template': 'spec.html'}),
+
     url(r'api/', include('tmesis.urls'))
 )

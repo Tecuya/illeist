@@ -6,7 +6,7 @@ set -e
 echo '--------------------- Mocha Specs ----------------------'
 
 # client specs
-PATH="$PATH:/opt/phantomjs/bin" mocha-phantomjs viron/static/js/spec/tests.html
+PATH="$PATH:/opt/phantomjs/bin" mocha-phantomjs http://localhost:8000/spec
 
 echo '----------------- Server Specs/Tests -------------------'
 

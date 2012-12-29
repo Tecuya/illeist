@@ -1,4 +1,4 @@
-(@viron or= {}).models or= {}
+@viron.models = {}
   
 class @viron.models.Content extends Backbone.Model
   doit: ->

@@ -4,5 +4,5 @@
 \#*
 /f8
 /.ropeproject/config.py
-/viron/static/js/models.js
-/viron/static/js/spec/spec_models.js
+/viron/static/js/*.js
+/viron/static/js/spec/*.js

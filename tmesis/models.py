@@ -16,6 +16,8 @@ class Content(models.Model):
     def get_nearby_content(
             cls, content_id, up_limit, up_depth, down_limit, down_depth):
 
+        # probably better to make this an object manager method
+
         def add_for_content_id(content_id, depth=1):
             children = Content.objects.filter(
                 child_relation__parent_id=content_id)[:down_limit]

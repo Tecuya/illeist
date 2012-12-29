@@ -1,8 +1,6 @@
+describe 'model', ->  
 
-describe 'model is instantiated', ->
-  sut = new viron.models.Content
-
-  it 'should exist', ->
-    true
+  it 'should instantiate cleanly', ->
+    sut = new viron.models.Content
     
     
