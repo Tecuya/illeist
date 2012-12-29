@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
-{% block content %}
-<div id="viron">
-</div>
+{% block head %}
+<script type="text/javascript">
+  $(document).ready(function() { 
+      app = new viron.application();
+      app.start();
+  }); 
+</script>
 {% endblock %}

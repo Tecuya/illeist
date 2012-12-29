@@ -1,36 +1,40 @@
 {% extends "base.html" %}
 
+{% block title %}
+Client Spec Runner
+{% endblock %}
+
 {% block head %}
   <link rel="stylesheet" href="/static/css/mocha.css" />  
 {% endblock %}
 
 {% block content %}
-    <div id="mocha"></div>
-
-    <script src="/static/js/lib/mocha.js"></script>
-    <script src="/static/js/lib/chai.js"></script>    
-
-    <script type="text/javascript">
-      mocha.ui('bdd'); 
-      mocha.reporter('html');
-      mocha.globals(['script*']);
-      chai.should();
-      //       expect = chai.expect;
-    </script>
-
-    <!-- systems under test -->    
-    <script src="/static/js/app.js"></script>    
-    <script src="/static/js/models.js"></script>    
-    <script src="/static/js/views.js"></script>    
-
-    <!-- spec -->    
-    <script src="/static/js/spec/spec_app.js"></script>
-    <script src="/static/js/spec/spec_models.js"></script>
-    <script src="/static/js/spec/spec_views.js"></script>
-
-    <script>
-        if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
-        else { mocha.run(); }
-    </script>
+  <div id="mocha"></div>
+  
+  <script src="/static/js/lib/mocha.js"></script>
+  <script src="/static/js/lib/chai.js"></script>    
+  
+  <script type="text/javascript">
+    mocha.ui('bdd'); 
+    mocha.reporter('html');
+    mocha.globals(['script*']);
+    chai.should();
+    //       expect = chai.expect;
+  </script>
+  
+  <!-- systems under test -->    
+  <script src="/static/js/app.js"></script>    
+  <script src="/static/js/models.js"></script>    
+  <script src="/static/js/views.js"></script>    
+  
+  <!-- spec -->    
+  <script src="/static/js/spec/spec_app.js"></script>
+  <script src="/static/js/spec/spec_models.js"></script>
+  <script src="/static/js/spec/spec_views.js"></script>
+  
+  <script>
+    if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+    else { mocha.run(); }
+  </script>
 {% endblock %}
 

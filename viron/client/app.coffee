@@ -6,7 +6,6 @@ class @viron.application extends Backbone.Marionette.Application
     super()
     @addInitializer (options) ->
       @addRegions
-        content: '#wrap'
-
-    
-    
+        content: '#wrap .viron'
+      @content.show new viron.views.Top
+          
