@@ -6,14 +6,22 @@ Client Spec Runner
 
 {% block head %}
   <link rel="stylesheet" href="/static/css/mocha.css" />  
+
 {% endblock %}
 
 {% block content %}
+  <h3>Javascript Client Spec Runner</h3>  
+
+  {% comment %}
+    Mocha docs & examples show running its scripts out of the body like this.. weird.
+  {% endcomment %}    
+
   <div id="mocha"></div>
   
+  <script src="/static/js/lib/sinon-1.5.2.js"></script>
   <script src="/static/js/lib/mocha.js"></script>
   <script src="/static/js/lib/chai.js"></script>    
-  
+
   <script type="text/javascript">
     mocha.ui('bdd'); 
     mocha.reporter('html');
@@ -21,12 +29,7 @@ Client Spec Runner
     chai.should();
     //       expect = chai.expect;
   </script>
-  
-  <!-- systems under test -->    
-  <script src="/static/js/app.js"></script>    
-  <script src="/static/js/models.js"></script>    
-  <script src="/static/js/views.js"></script>    
-  
+    
   <!-- spec -->    
   <script src="/static/js/spec/spec_app.js"></script>
   <script src="/static/js/spec/spec_models.js"></script>
