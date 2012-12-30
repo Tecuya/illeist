@@ -133,6 +133,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'south',
     'django_nose',
+    'backbone',
 
     # ours
     'tmesis',

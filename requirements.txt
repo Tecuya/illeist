@@ -1,12 +1,12 @@
 # NPM dependencies:
 # - mocha
 # - coffee
-# - mocha-phantomjs (client spec runner; requires phantomjs > 1.7 -- 1.6 will NOT work)
+# - mocha-phantomjs (client spec runner; requires phantomjs >= 1.7 -- 1.6 will NOT work)
 
+nose==1.2.1
+mock==1.0.1
 Django==1.4.3
 South==0.7.6
 django-extensions==1.0.1
-nose==1.2.1
-mock==1.0.1
 django-nose==1.1
-
+django-backbone==0.2.3

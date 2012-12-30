@@ -5,7 +5,7 @@ describe 'viron.application', ->
   it 'should instantiate cleanly', ->
     app.should.not.be.undefined
     
-  describe 'start', ->
+  describe 'start()', ->
     app.start()
   
     it 'should define content region', ->

@@ -1,5 +1,6 @@
 @viron = {}
 
+
 class @viron.router extends Backbone.Marionette.AppRouter
   appRoutes:
     '': 'most_popular_relations'

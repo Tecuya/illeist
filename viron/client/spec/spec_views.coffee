@@ -29,3 +29,14 @@ describe 'viron.views.Main', ->
 
     it 'should page.show() the subview', ->
       view.page.show.should.have.been.calledWith view.subview
+
+
+describe 'viron.views.MostPopular', ->
+
+  view = new viron.views.MostPopular
+
+  it 'should instantiate cleanly', ->
+    view.should.not.be.undefined
+    
+
+  

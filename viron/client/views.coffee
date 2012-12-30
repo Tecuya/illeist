@@ -18,6 +18,9 @@ class @viron.views.Main extends Backbone.Marionette.Layout
 class @viron.views.MostPopular extends Backbone.Marionette.Layout
   template: '#tpl-mostpopular'
 
+  constructor: ->
+    super()
+    
 
 class @viron.views.Content extends Backbone.Marionette.ItemView
   
