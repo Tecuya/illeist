@@ -6,7 +6,6 @@ class @viron.router extends Backbone.Marionette.AppRouter
     
   controller:
     most_popular_relations: ->
-      console.log "mpg"
       viron.state.set topview: viron.views.MostPopular
         
     
