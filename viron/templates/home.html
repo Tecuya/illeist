@@ -4,8 +4,9 @@
 <script type="text/javascript">
   $(document).ready(function() { 
 
-      // register urls for models that sync with django-backbone
+      // register urls for sync with django-backbone
       viron.models.Content.prototype.urlRoot = "{% url backbone:tmesis_content %}";
+      viron.collections.ContentList.prototype.url = "{% url backbone:tmesis_content %}";
 
       // make backbone.sync XHR send the csrf token
       // See: https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
@@ -18,8 +19,7 @@
       };
 
       // go
-      app = new viron.application();
-      app.start();
+      viron.start();
   }); 
 </script>
 {% endblock %}

@@ -26,7 +26,7 @@ Client Spec Runner
   <script type="text/javascript">
     mocha.ui('bdd'); 
     mocha.reporter('html');
-    mocha.globals(['script*']);
+    mocha.globals(['script*','jQuery*']);
     chai.should();
     //       expect = chai.expect;
   </script>
@@ -35,6 +35,7 @@ Client Spec Runner
   <script src="/static/js/spec/spec_app.js"></script>
   <script src="/static/js/spec/spec_models.js"></script>
   <script src="/static/js/spec/spec_views.js"></script>
+  <script src="/static/js/spec/spec_collections.js"></script>
   
   <script>
     if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
