@@ -6,7 +6,7 @@
 
       // register urls for sync with django-backbone
       viron.models.Content.prototype.urlRoot = "{% url backbone:tmesis_content %}";
-      viron.collections.ContentList.prototype.url = "{% url backbone:tmesis_content %}";
+      viron.collections.Content.prototype.url = "{% url backbone:tmesis_content %}";
 
       // make backbone.sync XHR send the csrf token
       // See: https://docs.djangoproject.com/en/dev/ref/contrib/csrf/

@@ -1,6 +1,6 @@
-describe 'viron.collections.ContentList', ->
+# describe 'viron.collections.Content', ->
 
-  sut = new viron.collections.ContentList
+#   sut = new viron.collections.Content
 
-  it 'should instance', ->
-    sut.should.not.be.undefined
+#   it 'should instance', ->
+#     sut.should.not.be.undefined

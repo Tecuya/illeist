@@ -10,10 +10,10 @@ describe 'viron.start()', ->
   after ->
     viron.application = viron.application_real
 
-  it 'should instantiate the application', ->
+  it 'should instantiate viron.application to viron.runtime.application', ->
     (viron.runtime.application instanceof viron.application).should.be.true
 
-  it 'should call start() on the application', ->
+  it 'should viron.runtime.application.start()', ->
     viron.runtime.application.start.should.have.been.called
 
 
@@ -33,10 +33,10 @@ describe 'viron.application', ->
     it 'should set up viron.runtime.state', ->
       ( viron.runtime.state instanceof viron.models.State ).should.be.true
 
-  describe 'start', ->
+  describe 'start()', ->
     
     before ->
-      sinon.spy(Backbone.history, 'start')
+      sinon.spy Backbone.history, 'start'
 
       viron.views.Main_real = viron.views.Main
       viron.views.Main = Backbone.Marionette.Layout
