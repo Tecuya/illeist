@@ -8,11 +8,11 @@
 
 class @viron.router extends Backbone.Marionette.AppRouter
   appRoutes:
-    '': 'most_popular_relations'
+    '': 'newest_content'
     
   controller:
-    most_popular_relations: ->
-      viron.runtime.state.set topview: viron.views.MostPopular
+    newest_content: ->
+      viron.runtime.state.set topview: viron.views.NewestContent
 
     
 class @viron.application extends Backbone.Marionette.Application

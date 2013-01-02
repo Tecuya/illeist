@@ -1,6 +1,6 @@
-<script type="text/html" id="tpl_mostpopular">
-  <p>Most Popular Content</p>
-  <div class="mostpopular"></div>
+<script type="text/html" id="tpl_newestcontent">
+  <p>(Newest Content View's Template)</p>
+  <div class="newestcontent"></div>
 </script>
 
 <script type="text/html" id="tpl_main">
@@ -8,16 +8,8 @@
   <div class="page"></div>
 </script>
 
-<script type="text/html" id="tpl_content">
-  <div class="content">  
-    <h2><%= title %></h2>
-    <div class="subcontent"></div>  
-  </div>
-</script>
-
 <script type="text/html" id="tpl_contentcomposite">
-  <h2>Composite: <%= title %></h2>
-
-  <div class="itemview"></div>  
+  <h2 class="title"<% if(id) { %> data-contentid="<%= id %>"<% } %>><%= title %></h2>
+  <div class="children"></div>  
 </script>
 

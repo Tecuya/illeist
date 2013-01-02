@@ -50,4 +50,4 @@ class TestViewsNearby(django.test.TestCase):
 
         ret = simplejson.loads(resp.content)
 
-        self.assertEquals(ret['data']['id'], 1)
+        self.assertEquals(ret[0]['id'], 2)

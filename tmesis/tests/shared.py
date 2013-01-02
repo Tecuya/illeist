@@ -6,4 +6,9 @@ from tmesis.models import Content, ContentRelation
 def create_data():
     tc = Content.objects.create(
         title='test content')
-    return tc
+
+    tc2 = Content.objects.create(
+        title='test child content')
+
+    ContentRelation.objects.create(
+        parent=tc, child=tc2)

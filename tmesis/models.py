@@ -26,15 +26,14 @@ class Content(models.Model):
 
             if depth < down_limit:
                 for content in children:
-                    ret.append(
-                        {'data': content.jsonify(),
-                         'children': add_for_content_id(
-                             content.id, depth + 1)})
+                    node = content.jsonify()
+                    node['children'] = add_for_content_id(content.id,
+                                                          depth + 1)
+                    ret.append(node)
 
             return ret
 
-        return {'data': Content.objects.get(id=content_id).jsonify(),
-                'children': add_for_content_id(content_id)}
+        return add_for_content_id(content_id)
 
 
 class ContentRelation(models.Model):

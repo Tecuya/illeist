@@ -27,8 +27,20 @@ body {
   /*    viron     */
 
   .viron { 
-    .itemview { 
+    /* indent children lists */
+    div.children { 
       padding-left: 10px;
+    }
+    
+    section.content { 
+      border: solid black 1px;
+      padding: 10px;
+      .title {
+        cursor: pointer;
+        &:hover { 
+          color: #000;
+        }
+      }
     }
   }
   
@@ -158,7 +170,7 @@ body {
 
 /* Headers */
 h2, h3, h4 {
-  margin:0 0 12px;
+  margin:0 0 6px;
   padding-bottom:5px;
   color:#555;
   font-weight:700;
