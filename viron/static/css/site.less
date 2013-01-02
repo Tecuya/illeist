@@ -35,11 +35,19 @@ body {
     section.content { 
       border: solid black 1px;
       padding: 10px;
+
+      /* interesting alternate idea: */
+      /* display: inline-block; */
+
       .title {
         cursor: pointer;
         &:hover { 
           color: #000;
         }
+      }
+      
+      .hidden { 
+        display: none;
       }
     }
   }

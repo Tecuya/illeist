@@ -23,10 +23,10 @@ class @viron.views.ContentComposite extends Backbone.Marionette.CompositeView
   template: '#tpl_contentcomposite'
   itemViewContainer: '.children'
 
-  onRender: ->
-    if @model.attributes.id
-      @$el.find("[data-contentid=#{@model.attributes.id}]").click => @load_nearby()
-
+  ui:
+    title: 'h2'
+    children: '.children'
+    
   initialize: ->
     # if initialized with a children attribute, treat it like a
     # collection; this way we can hand a full deep tree of data to
@@ -34,15 +34,31 @@ class @viron.views.ContentComposite extends Backbone.Marionette.CompositeView
     # sub-content views
     if @model.attributes.children
       @collection = new viron.collections.Content @model.attributes.children
+
+    # view states
+    # 0 - havent loaded nearby
+    # 1 - scheduled a nearby load
+    # 2 - have already loaded nearby
+    @state = 0
+    
+  onRender: ->
+    @ui.title.click =>
+      if @state == 0
+        @state = 1
+        @load_nearby()
+        
+      else if @state == 2
+        @ui.children.toggleClass('hidden')
       
   load_nearby: (evt) ->
     $.ajax
       url: '/api/nearby/' + @model.attributes.id,
       dataType: 'json',
       type: 'GET',
-      success: (data) =>        
+      success: (data) =>
         @collection = new viron.collections.Content data
         @render()
+        @state = 2
         
                              
 class @viron.views.NewestContent extends Backbone.Marionette.Layout
