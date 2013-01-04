@@ -12,11 +12,13 @@ class @viron.router extends Backbone.Router
   # a callable to produce the route url, and provide the handler for
   # how to execute the route
   myroutes: 
-    newest_content:
+    home:
       router_url: '',
       generate_url: -> ''
       handler: ->
-        viron.runtime.state.set topview: new viron.views.NewestContent,
+        view = new viron.views.NewestContent
+        view.render()
+        viron.runtime.state.set topview: view
 
     content:
       router_url: 'content/:content_id',
@@ -68,14 +70,12 @@ class @viron.application extends Backbone.Marionette.Application
     viron.runtime.router = new viron.router
     viron.runtime.state = new viron.models.State
         
-    # define the stuff that will be called on start()
-    @addInitializer (options) ->
-      
-      @addRegions content: '#wrap .viron'
+  start: ->
+    # let the initializers fire
+    super()
 
-      @content.show new viron.views.Main
-      
-      console.log "history start returns ", ( Backbone.history.start pushState: true )
-      
-
-
+    @addRegions content: '#wrap .viron'
+    @content.show new viron.views.Main
+    
+    # now hand the environment over to BB history
+    Backbone.history.start pushState: true

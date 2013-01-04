@@ -4,12 +4,18 @@ from django.db import models
 class Content(models.Model):
     title = models.CharField(max_length=255)
 
+    date_create = models.DateTimeField(auto_now_add=True,
+                                       db_index=True)
+
+    content = models.TextField('Contents')
+
     def __unicode__(self):
         return self.title
 
     def jsonify(self):
         return {
             'id': self.pk,
+            'date_create': unicode(self.date_create),
             'title': self.title}
 
     @classmethod

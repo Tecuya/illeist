@@ -48,7 +48,7 @@ class @viron.views.ContentComposite extends Backbone.Marionette.CompositeView
       else if @state == 2
         @ui.children.toggleClass('hidden')
 
-  load_nearby: (evt) ->
+  load_nearby: (evt) =>
     @state = 1
     $.ajax
       url: '/api/nearby/' + @model.attributes.id,
@@ -78,8 +78,10 @@ class @viron.views.ContentItem extends Backbone.Marionette.ItemView
       viron.runtime.router.nav 'content', @model.id
 
 
-class @viron.views.NewestContent extends Backbone.Marionette.CollectionView
+class @viron.views.NewestContent extends Backbone.Marionette.CompositeView
 
+  template: '#tpl_newestcontent'
+  
   itemView: viron.views.ContentItem
   emptyView: viron.views.EmptyList
 
